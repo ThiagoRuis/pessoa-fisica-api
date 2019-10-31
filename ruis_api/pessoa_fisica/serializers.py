@@ -17,8 +17,8 @@ class TelefoneSerializer(serializers.ModelSerializer):
 
 
 class PessoaSerializer(serializers.ModelSerializer):
-    enderecos = EnderecoSerializer(many=True)
-    telefones = TelefoneSerializer(many=True)
+    enderecos = EnderecoSerializer(many=True, required=False)
+    telefones = TelefoneSerializer(many=True, required=False)
     
     
     class Meta:
